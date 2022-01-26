@@ -1,5 +1,9 @@
 ﻿namespace CLC3_Project.Model
 {
+    /// <summary>
+    /// Handles the necessary Configuration for database access.
+    /// Responsible  for the book collection
+    /// </summary>
     public class BookStoreDatabaseSettings
     {
         public string ConnectionString { get; set; } = null!;

@@ -49,6 +49,9 @@ namespace CLC3_Project.Services
             return b;
         }
 
+        public async Task<List<Book>> GetByCategory(string cat) =>
+            await (await _booksCollection.FindAsync(x => x.Category.Contains(cat))).ToListAsync();
+
         public async Task CreateAsync(Book newBook) =>
             await _booksCollection.InsertOneAsync(newBook);
 
